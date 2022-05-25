@@ -1,0 +1,26 @@
+footer{
+    background: $secondColor;
+    color: $mainColor;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 10vh;
+    place-items: center center;
+    h6{
+        font-size: 1.2rem;
+        font-weight: lighter;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        li{
+            list-style-type: none;
+            i{
+                font-size: 1.5rem;
+                padding: 0 1rem;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+}

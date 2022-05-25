@@ -1,0 +1,274 @@
+main{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr;
+    color: $textColor;
+    h2{
+        padding: 2rem;
+    }
+    h2::after{
+        @include underline;
+    }
+    .popular{
+        grid-area: 1 / 1 / 2 / 2;
+        background: $mainColor;
+        padding: 1rem;
+        .popular--titles{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 50% 50%;
+            place-items: center center;
+            i{
+                font-size: 3rem;
+            }
+        }
+        .popular--content{
+            display: grid;
+            padding-bottom: 1rem;
+            .card{
+                border: 1px $secondColor solid;
+                border-radius: 20px;
+                box-shadow: 5px 5px 2px 0px $secondColor;
+                display: grid;
+                grid-template-columns: 10% 80% 10%;
+                padding: 1rem 0;
+                margin: 0.5rem 0;
+                .card-numbers{
+                    @include notes;
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: 1fr;
+                    place-items: center center;
+                    padding: 1rem;
+                }
+                .card-title{
+                    @include titles;
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                    text-align: center;
+                    padding: 1rem;
+                }
+                .card-author{
+                    grid-column: 2/3;
+                    grid-row: 3/4;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: 1fr;
+                    place-items: center center;
+                    padding: 1rem;
+                    img{
+                        border-radius: 50%;
+                        width: 5rem;
+                    }
+                    h5{
+                        padding: 0 1rem;
+                        font-style: italic;
+                        font-weight: lighter;
+                    }
+                }
+                .card-image{
+                    grid-column: 2/3;
+                    grid-row: 4/5;
+                    padding: 1rem;
+                    img{
+                        border: 5px solid $textColor;
+                        width: 100%;
+                    }
+                }
+                button{
+                    grid-column: 2/3;
+                    grid-row: 5/6;
+                    @include buttons;
+                }
+            }
+            button{
+                @include buttons;
+                place-self: center center;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .latest{
+        grid-area: 1 / 2 / 2 / 3;
+        article{
+            padding: 1rem;
+            &::after{
+                @include underline;
+                width: 80%;
+                background: $mainColor;
+            }
+        }
+        .all-items{
+            display: grid;
+            place-items: center center;
+            .latest--titles{
+                color: $mainColor;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 5rem 5rem;
+                place-items: center center;
+                i{
+                    font-size: 3rem;
+                }
+            }
+            .latest--resume{
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                grid-template-rows: 1fr;
+                place-items: center center;
+                img{
+                    width: 80%;
+                    height: 100%;
+                }
+            }
+            button{
+                @include buttons;
+                margin: 2rem 0 0 0;
+            }
+        }
+        .article-item{
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center center;
+            color: $mainColor;
+            .article-item--title{
+                font-size: 1.8rem;
+                text-align: center;
+                h3{
+                    &::after{
+                        @include underline;
+                    }
+                }
+            }
+            .article-item--author{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                place-items: center center;
+                color: black;
+                margin: 1rem 0;
+                .people{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    place-items: center center;
+                    img{
+                        border-radius: 50%;
+                        width: 50%;
+                    }
+                    .pseudo{
+                        place-self: center start;
+                    }
+                }
+                .data{
+                    display: grid;
+                    grid-template-columns: 20% 100%;
+                    place-items: center center;
+                    i{
+                        color: $mainColor;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .article-item--content{
+                display: grid;
+                place-items: center center;
+                img{
+                    border: 5px solid $secondColor;
+                    width: 50%;
+                }
+                p{
+                    color: black;
+                    text-align: center;
+                    margin: 2rem 0
+                }
+            }
+            button{
+                @include buttons;
+                margin: 2rem 0 0 0;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    main{
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "articles"
+        "populaires";
+        .popular{
+            grid-area: populaires;
+        }
+        .latest{
+            grid-area: articles;
+            article{
+                &::after{
+                    @include underline;
+                    width: 100%;
+                    background: $mainColor;
+                }
+            }
+            .article-item{
+                .article-item--author{
+                    grid-template-columns: 1fr;
+                    .people{
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        .pseudo{
+                            place-self: center center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    main{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .popular{
+            padding: 0;
+            .popular--titles{
+                padding: 0;
+            }
+            .popular--content{
+                .card{
+                    font-size: 0.8rem;
+                    margin: 0.5rem 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 991px) {
+    main{
+        .latest{
+            .all-items{
+                .latest--resume{
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 33% 33% 33%;
+                    grid-row-gap: 1rem;
+                    img{
+                        margin: 0 1rem;
+                    }
+                }
+            }
+            .article-item{
+                margin: 1rem 0;
+                .article-item--title{
+                    font-size: 1.5rem;
+                }
+                .article-item--content{
+                    img{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

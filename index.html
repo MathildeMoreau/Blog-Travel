@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/0f548b3386.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="welcome">
+            <h1><i class="bi bi-compass"></i> travelblog.com</h1>
+            <h2>Racontez-nous vos plus beaux souvenirs</h2>
+        </div>
+        <nav>
+            <div id="burger">
+                <i class="fa-solid fa-bars" id="toggleButton"></i>
+                <div class="logo">
+                    <i class="bi bi-compass"></i>
+                    <h1>travelblog.com</h1>
+                </div>
+            </div>
+            <ul id="menu">
+                <li><a href="" class="menuItem">Destinations</a></li>
+                <li><a href="" class="menuItem">Itinéraires et circuits</a></li>
+                <li><a href="" class="menuItem">Top 10 articles</a></li>
+                <li><a href="" class="menuItem">Poster un article</a></li>
+            </ul>
+        </nav>
+        <div class="top">
+            <article>
+                <div class="top--titles">
+                    <i class="bi bi-globe"></i>
+                    <h3>A la une</h3>
+                </div>
+                <h1>Bali</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quam quasi deleniti inventore fuga esse aspernatur debitis sit. Aspernatur, numquam.</p>
+                <div class="top--author">
+                    <img src="./images/users/emilie.jpg" alt="Emilie">
+                    <p>Par Emilie</p>
+                </div>
+                <button>Lire l'article</button>
+            </article>
+        </div>
+    </header>
+    <main>
+        <aside class="popular">
+            <div class="popular--titles">
+                <i class="bi bi-map"></i>
+                <h2>Les + populaires</h2>
+            </div>
+            <div class="popular--content">
+                <div class="card" id="one">
+                    <div class="card-numbers">
+                        <h4>#1</h4>
+                        <h4><i class="bi bi-star-fill"></i> 4.7 / 5</h4>
+                    </div>
+                    <div class="card-title">
+                        Une semaine à Santorini
+                    </div>
+                    <div class="card-author">
+                        <img src="./images/users/Steven79.jpg" alt="Steven">
+                        <h5>Steven79</h5>
+                        <i class="bi bi-calendar-minus-fill"></i>
+                        <h5>24/02/2021</h5>
+                    </div>
+                    <div class="card-image">
+                        <img src="./images/destination1.jpg" alt="Santorini">
+                    </div>
+                    <button>Lire l'article</button>
+                </div>
+                <div class="card" id="two">
+                    <div class="card-numbers">
+                        <h4>#2</h4>
+                        <h4><i class="bi bi-star-fill"></i> 4.6 / 5</h4>
+                    </div>
+                    <div class="card-title">
+                        Séjour de rêve à Miami
+                    </div>
+                    <div class="card-author">
+                        <img src="./images/users/emma2021.jpg" alt="Emma">
+                        <h5>Emma2021</h5>
+                        <i class="bi bi-calendar-minus-fill"></i>
+                        <h5>03/02/2021</h5>
+                    </div>
+                    <div class="card-image">
+                        <img src="./images/miami.jpg" alt="Miami">
+                    </div>
+                    <button>Lire l'article</button>
+                </div>
+                <div class="card" id="three">
+                    <div class="card-numbers">
+                        <h4>#3</h4>
+                        <h4><i class="bi bi-star-fill"></i> 4.3 / 5</h4>
+                    </div>
+                    <div class="card-title">
+                        L.A., here I come !
+                    </div>
+                    <div class="card-author">
+                        <img src="./images/users/julia.jpg" alt="Julia">
+                        <h5>julia</h5>
+                        <i class="bi bi-calendar-minus-fill"></i>
+                        <h5>15/02/2021</h5>
+                    </div>
+                    <div class="card-image">
+                        <img src="./images/losangeles.jpg" alt="Los Angeles">
+                    </div>
+                    <button>Lire l'article</button>
+                </div>
+                <div class="card" id="four">
+                    <div class="card-numbers">
+                        <h4>#4</h4>
+                        <h4><i class="bi bi-star-fill"></i> 4.2 / 5</h4>
+                    </div>
+                    <div class="card-title">
+                        Les Maldives à la folie
+                    </div>
+                    <div class="card-author">
+                        <img src="./images/users/johanna84.jpg" alt="johanna84">
+                        <h5>johanna84</h5>
+                        <i class="bi bi-calendar-minus-fill"></i>
+                        <h5>27/12/2020</h5>
+                    </div>
+                    <div class="card-image">
+                        <img src="./images/maldives.jpg" alt="Les Maldives">
+                    </div>
+                    <button>Lire l'article</button>
+                </div>
+                <div class="card" id="five">
+                    <div class="card-numbers">
+                        <h4>#5</h4>
+                        <h4><i class="bi bi-star-fill"></i> 4.2 / 5</h4>
+                    </div>
+                    <div class="card-title">
+                        Week-end à Toronto
+                    </div>
+                    <div class="card-author">
+                        <img src="./images/users/nathalie.jpg" alt="Nathalie">
+                        <h5>nathalie</h5>
+                        <i class="bi bi-calendar-minus-fill"></i>
+                        <h5>11/03/2021</h5>
+                    </div>
+                    <div class="card-image">
+                        <img src="./images/toronto.jpg" alt="Toronto">
+                    </div>
+                    <button>Lire l'article</button>
+                </div>
+                <button>Classement complet</button>
+            </div>
+
+        </aside>
+        <section class="latest">
+            <article class="all-items">
+                <div class="latest--titles">
+                    <i class="bi bi-clock-fill"></i>
+                    <h2>Derniers articles</h2>
+                </div>
+                <div class="latest--resume">
+                    <img src="./images/montreal.jpg" alt="Montreal">
+                    <img src="./images/sydney.jpg" alt="Sydney">
+                    <img src="./images/rio.jpg" alt="Rio">
+                </div>
+                <button>Tous les articles</button>
+            </article>
+            <article class="article-item montreal">
+                <div class="article-item--title">
+                    <h3>Découverte de Montréal</h3>
+                </div>
+                <div class="article-item--author">
+                    <div class="people">
+                        <img src="./images/users/emma2021.jpg" alt="emma">
+                        <h5 class="pseudo">Emma2021</h5>
+                    </div>
+                    <div class="data">
+                        <i class="bi bi-clock-fill"></i>
+                        <h5 class="date">12/03/2021 - 10h20</h5>
+                    </div>
+                </div>
+                <div class="article-item--content">
+                    <img src="./images/montreal.jpg" alt="Montreal">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis placeat deleniti earum ab beatae, dicta, aliquid libero ipsam exercitationem fugiat totam. Quo aliquid, delectus fugiat natus ad rem ex officiis voluptatibus corporis? Consectetur, nostrum! A consequuntur debitis veritatis quam beatae</p>
+                </div>
+                <button>Lire l'article</button>
+            </article>
+            <article class="article-item sydney">
+                <div class="article-item--title">
+                    <h3>Escapade à Sidney</h3>
+                </div>
+                <div class="article-item--author">
+                    <div class="people">
+                        <img src="./images/users/Steven79.jpg" alt="Steven79">
+                        <h5 class="pseudo">Steven79</h5>
+                    </div>
+                    <div class="data">
+                        <i class="bi bi-clock-fill"></i>
+                        <h5 class="date">11/03/2021 - 14h27</h5>
+                    </div>
+                </div>
+                <div class="article-item--content">
+                    <img src="./images/sydney.jpg" alt="Sydney">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis placeat deleniti earum ab beatae, dicta, aliquid libero ipsam exercitationem fugiat totam. Quo aliquid, delectus fugiat natus ad rem ex officiis voluptatibus corporis? Consectetur, nostrum! A consequuntur debitis veritatis quam beatae</p>
+                </div>
+                <button>Lire l'article</button>
+            </article>
+            <article class="article-item rio">
+                <div class="article-item--title">
+                    <h3>En route pour Rio</h3>
+                </div>
+                <div class="article-item--author">
+                    <div class="people">
+                        <img src="./images/users/julia.jpg" alt="julia">
+                        <h5 class="pseudo">julia</h5>
+                    </div>
+                    <div class="data">
+                        <i class="bi bi-clock-fill"></i>
+                        <h5 class="date">11/03/2021 - 9h32</h5>
+                    </div>
+                </div>
+                <div class="article-item--content">
+                    <img src="./images/rio.jpg" alt="Rio">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis placeat deleniti earum ab beatae, dicta, aliquid libero ipsam exercitationem fugiat totam. Quo aliquid, delectus fugiat natus ad rem ex officiis voluptatibus corporis? Consectetur, nostrum! A consequuntur debitis veritatis quam beatae</p>
+                </div>
+                <button>Lire l'article</button>
+            </article>
+        </section>
+    </main>
+        <section class="partners">
+            <i class="fa-solid fa-plane-departure"></i>
+            <h2>Nos partenaires</h2>
+            <h5>PROMO : Bénéficiez de 10% de réduction avec le code : travelblog2021</h5>
+        </section>
+        <section class="brands">
+            <div class="brands--logo">
+                <h5>Grid Airlines</h5>
+                <img src="./images/company1.png" alt="Grid Airlines">
+            </div>
+            <div class="brands--logo">
+                <h5>World Air Company</h5>
+                <img src="./images/company2.png" alt="World Air Company">
+            </div>
+            <div class="brands--logo">
+                <h5>Sky Masters</h5>
+                <img src="./images/company3.png" alt="Sky Masters">
+            </div>
+        </section>
+    <footer>
+        <h6>© 2021 travelblog.com</h6>
+        <ul>
+            <li><i class="bi bi-facebook"></i></li>
+            <li><i class="bi bi-twitter"></i></li>
+            <li><i class="bi bi-linkedin"></i></li>
+            <li><i class="bi bi-instagram"></i></li>
+        </ul>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

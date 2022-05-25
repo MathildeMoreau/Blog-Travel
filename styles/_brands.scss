@@ -1,0 +1,29 @@
+.brands{
+    background: $mainColor;
+    color: $textColor;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 1fr;
+    place-items: center center;
+    padding: 2rem 0;
+    .brands--logo{
+        display: grid;
+        place-items: center center;
+        img{
+            padding: 2rem;
+            width: 40%;
+            transition: 0.2s;
+            &:hover{
+                transform: scale(1.3);
+                transition: 0.2s;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    .brands{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}

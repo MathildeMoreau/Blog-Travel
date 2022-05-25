@@ -1,0 +1,29 @@
+.partners{
+    background-image: linear-gradient(#e6e92933, #e6e92933),url(../images/plane.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: grid;
+    grid-template-rows: 15% 15% 60%;
+    place-items: start center;
+    i{
+        font-size: 3rem;
+        color: $mainColor;
+    }
+    h2{
+        @include titles;
+        place-self: center center;
+        color: $mainColor;
+        grid-row: 2/3;
+        &::after{
+            @include underline;
+            margin: 0;
+        }
+    }
+    h5{
+        color: $textColor;
+        grid-row: 3/4;
+        text-align: center;
+    }
+}
